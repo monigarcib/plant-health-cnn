@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Blanca Predict</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="page">
+
+        <nav class="navbar">
+            <div class="brand">
+                <div class="logo">🌿</div>
+                <div>
+                    <h2>Casa Blanca</h2>
+                    <span>PREDICT</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#detectar">Detectar</a>
+                <a href="#info">Proyecto</a>
+            </div>
+        </nav>
+
+        <section id="inicio" class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">INTELIGENCIA ARTIFICIAL PARA PLANTAS</p>
+                <h1>Casa Blanca <span>Predict</span></h1>
+                <p class="description">
+                    Clasifica imágenes de plantas como sanas o marchitas utilizando
+                    visión por computadora y Machine Learning.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#detectar" class="primary-btn">Comenzar análisis</a>
+                    <span class="secondary-note">Modelo CNN entrenado</span>
+                </div>
+
+                <div class="stats">
+                    <div>
+                        <strong>294+</strong>
+                        <p>Imágenes usadas</p>
+                    </div>
+                    <div>
+                        <strong>84%</strong>
+                        <p>Accuracy aprox.</p>
+                    </div>
+                    <div>
+                        <strong>2</strong>
+                        <p>Clases</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="plant-card">
+                    <div class="circle"></div>
+                    <img src="/static/planta_img.png" alt="Planta decorativa" class="plant-image">  
+                </div>
+            </div>
+        </section>
+
+        <section id="detectar" class="analyzer-section">
+            <div class="section-title">
+                <p>ANÁLISIS DE IMAGEN</p>
+                <h2>Sube una foto de tu planta</h2>
+            </div>
+
+            <div class="analyzer-grid">
+                <div class="upload-panel">
+                    <h3>1. Carga tu imagen</h3>
+                    <p>Formatos permitidos: JPG, PNG o WEBP.</p>
+
+                    <label class="drop-zone" for="imageInput">
+                        <span class="upload-icon">☁️</span>
+                        <strong>Haz clic para seleccionar</strong>
+                        <small>o arrastra una imagen aquí</small>
+                    </label>
+
+                    <input type="file" id="imageInput" accept="image/*" hidden>
+
+                    <button id="predictButton">Analizar planta</button>
+                </div>
+
+                <div class="preview-panel">
+                    <h3>2. Vista previa</h3>
+                    <div class="image-frame">
+                        <img id="preview" alt="Vista previa de la imagen">
+                        <p id="emptyPreview">Aún no has seleccionado una imagen.</p>
+                    </div>
+                </div>
+
+                <div id="result" class="result-panel hidden">
+                    <h3>3. Resultado</h3>
+                    <div class="result-content">
+                        <span id="resultIcon" class="result-icon">🌿</span>
+                        <h2 id="resultTitle"></h2>
+                        <p id="confidence"></p>
+                        <div class="progress">
+                            <div id="progressBar"></div>
+                        </div>
+                        <p id="message"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="info-section">
+            <div class="info-card">
+                <span>🧠</span>
+                <h3>Visión por computadora</h3>
+                <p>El sistema analiza patrones visuales como color, forma y textura.</p>
+            </div>
+
+            <div class="info-card">
+                <span>🌱</span>
+                <h3>Apoyo al vivero</h3>
+                <p>Ayuda a detectar señales de deterioro de forma rápida y objetiva.</p>
+            </div>
+
+            <div class="info-card">
+                <span>⚡</span>
+                <h3>Resultados rápidos</h3>
+                <p>La predicción se obtiene en segundos desde la aplicación web.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Casa Blanca Predict · Machine Learning y Visión por Computadora</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
